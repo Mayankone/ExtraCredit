@@ -230,5 +230,69 @@ let users = [
     }
   }
 ]
+    const removeNumbers = () => {
+    users.forEach((element) => {
+        element.phone = null;
+    })
+}
+// Function to remove all the numbers(7)
+removeNumbers();
 
-console.log(users[0]);
+const getUserInfo = (email) => {
+    users.forEach((element) => {
+        if(element.email == email){
+            console.log(element);
+        }
+    })
+}
+// getUserInfo("Telly.Hoeger@billy.biz")
+// Get user info(8)
+
+const changeUserInfo = (email, username) => {
+    users.forEach((element) => {
+        if(element.email == email){
+            element.username = username;
+        }
+    })
+}
+// changeUserInfo("Telly.Hoeger@billy.biz", "Eren Yeager");
+// Change username using email as a parameter(9)
+
+let points = [50, 20, 40, 33, 60, 20, 90, 110, 15, 30];
+
+const addPoints = () => {
+    users.forEach((element) => {
+        element.monthlyPoints = 0;
+    })
+}
+addPoints();
+
+const monthlyPoints = () => {
+    users.forEach((element) => {
+        for(var i = 1;i<points.length;i++){
+            console.log("This month you're getting " + points[i] + " points");
+            element.monthlyPoints = element.monthlyPoints + points[i];
+        }
+    })
+}
+monthlyPoints();
+
+const specialMonth = () => {
+    users.forEach((element) => {
+        var money = Math.floor(element.monthlyPoints * 0.10);
+        element.monthlyPoints = element.monthlyPoints + money;
+        console.log("This month is special! Everyone gets an additional 10% added to their point totals! Enjoy the extra " + money + " points");
+
+    })
+}
+specialMonth();
+
+const removeUser =(email) => {
+    users.forEach((element) => {
+        if(element.email == email){
+            element.splice[8];
+        }
+    })
+}
+// removeUser("Chaim_McDermott@dana.io");
+// Removed user(final step)
