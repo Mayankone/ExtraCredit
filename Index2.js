@@ -241,7 +241,7 @@ removeNumbers();
 const getUserInfo = (email) => {
     users.forEach((element) => {
         if(element.email == email){
-            console.log(element);
+            console.log(element); // Return information about the element if the email is correct
         }
     })
 }
@@ -262,7 +262,7 @@ let points = [50, 20, 40, 33, 60, 20, 90, 110, 15, 30];
 
 const addPoints = () => {
     users.forEach((element) => {
-        element.monthlyPoints = 0;
+        element.monthlyPoints = 0; // Add a function that sets monthly points for each user equal to 0.
     })
 }
 addPoints();
@@ -271,7 +271,7 @@ const monthlyPoints = () => {
     users.forEach((element) => {
         for(var i = 1;i<points.length;i++){
             console.log("This month you're getting " + points[i] + " points");
-            element.monthlyPoints = element.monthlyPoints + points[i];
+            element.monthlyPoints = element.monthlyPoints + points[i]; // Add points each month from the parameter to each user
         }
     })
 }
@@ -281,7 +281,7 @@ const specialMonth = () => {
     users.forEach((element) => {
         var money = Math.floor(element.monthlyPoints * 0.10);
         element.monthlyPoints = element.monthlyPoints + money;
-        console.log("This month is special! Everyone gets an additional 10% added to their point totals! Enjoy the extra " + money + " points");
+        console.log("This month is special! Everyone gets an additional 10% added to their point totals! Enjoy the extra " + money + " points"); //Extra bonus points
 
     })
 }
